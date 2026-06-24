@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lemon Legends – Checkout</title>
+  <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="images/Lemon.png" class="logo-img" alt="Lemon Legends Logo">
+      <span class="logo-text">Lemon Legends</span>
+    </div>
+  </nav>
+
+  <section class="checkout-container">
+
+    <!-- STEP 1 -->
+    <div class="step active" id="step1">
+      <h2>Let’s Get Started</h2>
+      <p class="subtitle">We just need a few details.</p>
+
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="text" id="address" placeholder="Delivery Address" required>
+
+      <input type="date" id="date" readonly>
+
+      <button class="next-btn" onclick="goToStep(2)">Next →</button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" id="step2">
+      <h2>Customize Your Lemonade</h2>
+      <p class="subtitle">Make it yours.</p>
+
+      <label>Quantity</label>
+      <input type="number" id="quantity" min="1" value="1">
+
+      <label>Size</label>
+      <select id="size">
+        <option value="regular">Regular</option>
+        <option value="large">Large (+$1.00)</option>
+      </select>
+
+      <label class="checkbox">
+        <input type="checkbox" id="extraIce"> Extra Ice (+$0.10)
+      </label>
+
+      <p class="total">Total: <span id="totalPrice">$2.00</span></p>
+
+      <div class="btn-row">
+        <button class="back-btn" onclick="goToStep(1)">← Back</button>
+        <button class="next-btn" onclick="goToStep(3)">Next →</button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step" id="step3">
+      <h2 id="summaryTitle"></h2>
+
+      <div class="summary-box">
+        <p><strong>Name:</strong> <span id="sumName"></span></p>
+        <p><strong>Address:</strong> <span id="sumAddress"></span></p>
+        <p><strong>Date:</strong> <span id="sumDate"></span></p>
+        <p><strong>Quantity:</strong> <span id="sumQty"></span></p>
+        <p><strong>Size:</strong> <span id="sumSize"></span></p>
+        <p><strong>Extra Ice:</strong> <span id="sumIce"></span></p>
+        <p class="total final-total"><strong>Total:</strong> <span id="sumTotal"></span></p>
+      </div>
+
+      <div class="btn-row">
+        <button class="back-btn" onclick="goToStep(2)">← Back</button>
+        <button class="pay-btn" onclick="submitOrder()">Taste the Legend</button>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    Made by people with real marketing experience.
+  </footer>
+
+  <script src="order.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  background: #0a0a0a;
+  color: white;
+  font-family: system-ui, sans-serif;
+}
+
+.navbar {
+  padding: 20px 30px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffd84d;
+}
+
+.checkout-container {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.step {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.step.active {
+  display: block;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 0 0 15px #ffcc00;
+}
+
+.subtitle {
+  text-align: center;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  background: #111;
+  color: white;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.next-btn, .back-btn, .pay-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.next-btn {
+  background: #ffd84d;
+  color: black;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.back-btn {
+  background: #333;
+  color: white;
+}
+
+.pay-btn {
+  background: #ffd84d;
+  color: black;
+  width: 100%;
+  box-shadow: 0 0 20px #ffcc00;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.summary-box {
+  background: #111;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #ffcc00;
+  margin-top: 20px;
+}
+
+.total {
+  font-size: 1.2rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #ffd84d;
+  opacity: 0.8;
+}
+.logo-img {
+  height: 45px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-logo {
+  height: 220px; /* bigger logo */
+  width: auto;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.05); /* subtle hover pop */
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
